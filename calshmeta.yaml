@@ -1,4 +1,4 @@
-mixed-port: 8092
+mixed-port: 7890
 allow-lan: false
 bind-address: "*"
 mode: rule
@@ -11,8 +11,8 @@ dns:
   listen: 0.0.0.0:7874
   ipv6: true
   default-nameserver:
-  - 202.96.182.86
-  - 202.96.134.33
+  - 114.114.114.114
+  - 223.5.5.5
   enhanced-mode: fake-ip
   fake-ip-filter:
   - "+.lan"
@@ -28,137 +28,254 @@ dns:
   - "*.msftncsi.com"
   - "*.msftconnecttest.com"
   - "*.mcdn.bilivideo.cn"
-
-p:
-  type: http
-  interval: 600
-  health-check: &1
-    enable: true
-    lazy: true
-    url: https://cp.cloudflare.com/generate_204
-    interval: 600
-
-proxies:
-u:
-  type: select
-  use: &9
-  - P2
   
-k:
-  type: select
-  use: &2
-  - P1
-
 proxy-providers:
-
   P1:
     type: http
-    interval: 43200
+    interval: 1800
     health-check: *1
-    url: 订阅链接
+    url: "https://dingyue.oyix.de/?token=d4bdaac9-e185-461c-9fde-5d2c8d2eae72"
     path: "./proxy_providers/P1.yaml"
-
-  P2:
-    type: http
-    interval: 43200
-    health-check: *1
-    url: 订阅链接
-    path: "./proxy_providers/P2.yaml"
-
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
 
 proxy-groups:
-
-- name: 地区选择
-  type: select
-  proxies: 
-  - 香港
-  - 日本
-  - 新加坡
-  - 美国
-  - 手动
-  - DIRECT
-
-- name: 手动
-  type: select
-  use: *9
+  - name: Youtube
+    type: url-test
+    interval: 300
+    proxies:
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
+      - 手动
+      
+  - name: OpenAI
+    type: url-test
+    interval: 300
+    proxies:
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
+      - 手动
+      
+  - name: TikTok
+    type: url-test
+    interval: 300
+    proxies:
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
+      - 手动
+      
+  - name: Netflix
+    type: url-test
+    interval: 300
+    proxies:
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
+      
+  - name: DisneyP
+    type: url-test
+    interval: 300
+    proxies:
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
   
-- name: 香港
-  type: url-test
-  interval: 600
-  lazy: true
-  use: *2
-  filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-- name: 日本
-  type: url-test
-  interval: 600
-  lazy: true
-  use: *2
-  filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-- name: 新加坡
-  type: url-test
-  interval: 600
-  lazy: true
-  use: *2
-  filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-
-- name: 美国
-  type: url-test
-  interval: 600
-  lazy: true
-  use: *2
-  filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\\b(US|UnitedStates)\\b)))(?!.*((?i)回国|校园|游戏|(\\b(GAME)\\b))).*$"
+  - name: 地区选择
+    type: select
+    proxies: 
+      - 香港
+      - 日韩
+      - 新加坡
+      - 美国
+      - 手动
+      - DIRECT
+  
+  - name: 手动
+    type: select
+    use: 
+      - P1
+    
+  - name: 香港
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 600
+    lazy: true
+    use: 
+      - P1
+    filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  
+  - name: 日韩
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    use: 
+      - P1
+    filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|首尔|春川|韩|韓|(\b(JP|Japan|KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  
+  - name: 新加坡
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    use: 
+      - P1
+    filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+  
+  - name: 美国
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: true
+    use: 
+      - P1
+    filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\\b(US|UnitedStates)\\b)))(?!.*((?i)回国|校园|游戏|(\\b(GAME)\\b))).*$"
 
 rule-providers:
-
-  Spotify:
+ TikTok:
     type: http
     behavior: domain
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list"
+    path: "./RuleSet/TikTok.yaml"
     interval: 43200
-    url: https://rules.kr328.app/spotify.yaml
-    path: "./rule_provider/Spotify.yaml"
 
-  ChinaIP:
+ Apple:
     type: http
-    behavior: classical
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
+    path: "./RuleSet/Apple.yaml"
     interval: 43200
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaIPs/ChinaIPs_Classical.yaml
-    path: "./rule_provider/ChinaIP.yaml"
+
+  Google:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list"
+    path: "./RuleSet/Google.yaml"
+    interval: 43200
+
+  OpenAI:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/juewuy/ShellClash/master/rules/ai.list"
+    path: "./RuleSet/OpenAI.yaml"
+    interval: 43200
 
   Telegram:
     type: http
     behavior: classical
     interval: 43200
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
-    path: "./rule_provider/Telegram.yaml"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
+    path: "./RuleSet/Telegram.yaml"
 
   China:
     type: http
     behavior: classical
     interval: 43200
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China_Classical.yaml
-    path: "./rule_provider/China.yaml"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    path: "./RuleSet/China.yaml"
 
-  Bilibili:
+  DisneyP:
     type: http
     behavior: classical
     interval: 43200
-    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml
-    path: "./rule_provider/Bilibili.yaml"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/DisneyPlus.list"
+    path: "./RuleSet/DisneyP.yaml"
+
+  NETFLIX:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list"
+    path: "./RuleSet/NETFLIX.yaml"
+    
+  Discord:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.list"
+    path: "./RuleSet/Discord.yaml"
+
+  EMBY:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.list"
+    path: "./RuleSet/EMBY.yaml"
+
+  Github:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list"
+    path: "./RuleSet/Github.yaml"
+
+  PT:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/iniwex5/tools/main/loon/PT.list"
+    path: "./RuleSet/PT.yaml"
+
+  User:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/iniwex5/tools/main/loon/user.list"
+    path: "./RuleSet/User.yaml"
+    
+  ChinaIP:
+    type: http
+    behavior: classical
+    interval: 43200
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    path: "./RuleSet/ChinaIP.yaml"
 
   Lan:
     type: http
     behavior: classical
     interval: 43200
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
-    path: "./rule_provider/Lan.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: "./RuleSet/Lan.yaml"
 
 rules:
-- RULE-SET,Lan,DIRECT
-- RULE-SET,Telegram,地区选择,no-resolve
-- RULE-SET,Spotify,日本,no-resolve
-- RULE-SET,Bilibili,DIRECT
-- RULE-SET,China,DIRECT
-- RULE-SET,ChinaIP,DIRECT
-- MATCH,地区选择
+  - DOMAIN-KEYWORD,youtube,Youtube
+  - DOMAIN,youtubei.googleapis.com,Youtube
+  - DOMAIN,yt3.ggpht.com,Youtube
+  - DOMAIN-SUFFIX,googlevideo.com,Youtube
+  - DOMAIN-SUFFIX,gvt2.com,Youtube
+  - DOMAIN-SUFFIX,withyoutube.com,Youtube
+  - DOMAIN-SUFFIX,youtu.be,Youtube
+  - DOMAIN-SUFFIX,youtube-nocookie.com,Youtube
+  - DOMAIN-SUFFIX,youtube.com,Youtube
+  - DOMAIN-SUFFIX,youtubeeducation.com,Youtube
+  - DOMAIN-SUFFIX,youtubegaming.com,Youtube
+  - DOMAIN-SUFFIX,youtubekids.com,Youtube
+  - DOMAIN-SUFFIX,yt.be,Youtube
+  - DOMAIN-SUFFIX,api2d.net,DIRECT
+  - DOMAIN-SUFFIX,bing.com,地区选择
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Telegram,地区选择,no-resolve
+  - RULE-SET,Google,地区选择
+  - RULE-SET,China,DIRECT
+  - RULE-SET,PT,DIRECT
+  - RULE-SET,OpenAI,OpenAI
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,User,地区选择
+  - RULE-SET,Github,地区选择
+  - RULE-SET,Discord,地区选择
+  - RULE-SET,DisneyP,DisneyP
+  - RULE-SET,NETFLIX,NETFLIX
+  - RULE-SET,EMBY,DIRECT
+  - RULE-SET,ChinaIP,DIRECT
+  - MATCH,地区选择
