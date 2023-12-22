@@ -5,29 +5,6 @@ mode: rule
 log-level: info
 ipv6: true
 external-controller: 0.0.0.0:9090
-dns:
-
-  enable: true
-  listen: 0.0.0.0:7874
-  ipv6: true
-  default-nameserver:
-  - 114.114.114.114
-  - 223.5.5.5
-  enhanced-mode: fake-ip
-  fake-ip-filter:
-  - "+.lan"
-  - "+.stun.*.*"
-  - "+.stun.*.*.*"
-  - "+.stun.*.*.*.*"
-  - "+.stun.*.*.*.*.*"
-  - lens.l.google.com
-  - "*.n.n.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.*.microsoft.com
-  - "*.*.xboxlive.com"
-  - "*.msftncsi.com"
-  - "*.msftconnecttest.com"
-  - "*.mcdn.bilivideo.cn"
   
 proxy-providers:
   P1:
