@@ -33,7 +33,6 @@ proxy-providers:
   P1:
     type: http
     interval: 1800
-    health-check: *1
     url: "https://dingyue.oyix.de/?token=d4bdaac9-e185-461c-9fde-5d2c8d2eae72"
     path: "./proxy_providers/P1.yaml"
     health-check:
