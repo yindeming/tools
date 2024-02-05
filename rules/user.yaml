@@ -15,3 +15,4 @@ payload:
   - DOMAIN-SUFFIX, mcc-mnc-list.com
   - DOMAIN, registry.hub.docker.com
   - DOMAIN-SUFFIX, dashlane.com
+  - DOMAIN-SUFFIX, htx.com
