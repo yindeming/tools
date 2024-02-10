@@ -16,3 +16,4 @@ payload:
   - DOMAIN, registry.hub.docker.com
   - DOMAIN-SUFFIX, dashlane.com
   - DOMAIN-SUFFIX, htx.com
+  - DOMAIN-SUFFIX, zendesk.com
