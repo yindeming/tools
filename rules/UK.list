@@ -1,8 +1,9 @@
+# 英国银行
 DOMAIN-SUFFIX, monzo.com
 DOMAIN-SUFFIX, wuzo.com
+DOMAIN-SUFFIX, wise.com
 DOMAIN-SUFFIX, stripe.com
 DOMAIN-SUFFIX, stripe.uk
-DOMAIN-SUFFIX, wise.com
 DOMAIN-SUFFIX, trading212.com
 DOMAIN-SUFFIX, freetrade.com
 DOMAIN-SUFFIX, lemfi.com
