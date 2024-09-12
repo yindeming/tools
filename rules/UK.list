@@ -23,12 +23,12 @@ DOMAIN-SUFFIX, barclays.co.uk
 DOMAIN-SUFFIX, barclays.com
 # myguava
 DOMAIN-SUFFIX, guavapay.com
-DOMAIN-SUFFIX,sendbird.com
+DOMAIN-SUFFIX, sendbird.com
 # 小马
-lloydsbank.co.uk
-amazontrust.com
-dynatrace.com
+DOMAIN-SUFFIX, lloydsbank.co.uk
+DOMAIN-SUFFIX, amazontrust.com
+DOMAIN-SUFFIX, dynatrace.com
 # tsb
-tsb.co.uk
-tsb.demdex.net
-cm.everesttech.net
+DOMAIN-SUFFIX, tsb.co.uk
+DOMAIN-SUFFIX, tsb.demdex.net
+DOMAIN-SUFFIX, cm.everesttech.net
