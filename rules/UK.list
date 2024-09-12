@@ -46,7 +46,6 @@ DOMAIN-SUFFIX, ipify.org
 # zilch
 DOMAIN-SUFFIX, payzilch.com
 DOMAIN-SUFFIX, eu.intercom.io
-DOMAIN-SUFFIX, launchdarkly.com
 DOMAIN-SUFFIX, verygoodvault.com
 DOMAIN-SUFFIX, verygood.systems
 DOMAIN-SUFFIX, appsflyer.com
@@ -84,6 +83,8 @@ DOMAIN-KEYWORD, newdaycards
 # moneybox
 DOMAIN-SUFFIX, moneyboxapp.com
 DOMAIN-SUFFIX, browser-intake-datadoghq.eu
-DOMAIN-SUFFIX, launchdarkly.com
 # paysend
 DOMAIN-SUFFIX, paysend.io
+# hsbc uk
+DOMAIN-SUFFIX, hsbc.co.uk
+DOMAIN-SUFFIX, eum-appdynamics.com
