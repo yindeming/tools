@@ -1,11 +1,12 @@
 # 英国银行
+DOMAIN-SUFFIX, online-metrix.net
 #wise
 DOMAIN-SUFFIX, wise.com
 DOMAIN, tw-avatar.s3.eu-central-1.amazonaws.com
 # skrill
 DOMAIN-SUFFIX, skrill.com
 DOMAIN-SUFFIX, skrill.uk
-DOMAIN-SUFFIX, online-metrix.net
+
 # Chase
 DOMAIN-SUFFIX, chase.com
 DOMAIN-SUFFIX, chase.uk
@@ -80,3 +81,9 @@ DOMAIN-KEYWORD, trading212
 # aqua
 DOMAIN-SUFFIX, newdaycards.com
 DOMAIN-KEYWORD, newdaycards
+# moneybox
+DOMAIN-SUFFIX, moneyboxapp.com
+DOMAIN-SUFFIX, browser-intake-datadoghq.eu
+DOMAIN-SUFFIX, launchdarkly.com
+# paysend
+DOMAIN-SUFFIX, paysend.io
