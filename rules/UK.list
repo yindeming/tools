@@ -62,9 +62,7 @@ DOMAIN-SUFFIX, stripe.uk
 DOMAIN-SUFFIX, monzo-alt.net
 DOMAIN-SUFFIX, monzo.com
 DOMAIN, monzo.statuspage.io
-DOMAIN, firebaselogging-pa.googleapis.com
 # lemfi
-DOMAIN-SUFFIX, app-measurement.com
 DOMAIN-SUFFIX, lemfi.com
 DOMAIN-SUFFIX, branch.io
 DOMAIN-SUFFIX, appsflyer.com
@@ -87,4 +85,4 @@ DOMAIN-SUFFIX, browser-intake-datadoghq.eu
 DOMAIN-SUFFIX, paysend.io
 # hsbc uk
 DOMAIN-SUFFIX, hsbc.co.uk
-DOMAIN-SUFFIX, eum-appdynamics.com
+
