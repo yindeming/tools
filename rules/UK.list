@@ -1,6 +1,5 @@
 # 英国银行
 DOMAIN-SUFFIX, monzo.com
-DOMAIN-SUFFIX, wuzo.com
 DOMAIN-SUFFIX, wise.com
 DOMAIN-SUFFIX, stripe.com
 DOMAIN-SUFFIX, stripe.uk
@@ -12,6 +11,7 @@ DOMAIN-SUFFIX, skrill.uk
 # Chase
 DOMAIN-SUFFIX, chase.com
 DOMAIN-SUFFIX, chase.uk
+DOMAIN-SUFFIX, chase.co.uk
 # 信用查询
 DOMAIN-SUFFIX, creditkarma.co.uk
 DOMAIN-SUFFIX, totallymoney.uk
@@ -32,3 +32,16 @@ DOMAIN-SUFFIX, dynatrace.com
 DOMAIN-SUFFIX, tsb.co.uk
 DOMAIN-SUFFIX, tsb.demdex.net
 DOMAIN-SUFFIX, cm.everesttech.net
+# ifast
+DOMAIN-SUFFIX, ifastgb.com
+# wuzo
+DOMAIN-SUFFIX, wuzo.co.uk
+DOMAIN-SUFFIX, wuzo.com
+DOMAIN-SUFFIX, ipify.org
+# zilch
+payzilch.com
+eu.intercom.io
+launchdarkly.com
+verygoodvault.com
+verygood.systems
+appsflyer.com
