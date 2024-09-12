@@ -1,8 +1,7 @@
 # 英国银行
+#wise
 DOMAIN-SUFFIX, wise.com
-DOMAIN-SUFFIX, trading212.com
-DOMAIN-SUFFIX, freetrade.com
-DOMAIN-SUFFIX, lemfi.com
+DOMAIN, tw-avatar.s3.eu-central-1.amazonaws.com
 # skrill
 DOMAIN-SUFFIX, skrill.com
 DOMAIN-SUFFIX, skrill.uk
@@ -17,12 +16,14 @@ DOMAIN-SUFFIX, totallymoney.uk
 DOMAIN-SUFFIX, totallymoney.com
 DOMAIN-SUFFIX, clearscore.com
 DOMAIN-SUFFIX, checkmyfile.com
+DOMAIN-SUFFIX, hellopillar.com
 # barclays
 DOMAIN-SUFFIX, barclays.co.uk
 DOMAIN-SUFFIX, barclays.com
 DOMAIN-SUFFIX, barclays.mobi
 DOMAIN, barclaysuk.sc.omtrdc.net
 DOMAIN, bclays-ads.aimatch.com
+DOMAIN-KEYWORD, barclays
 # myguava
 DOMAIN-SUFFIX, guavapay.com
 DOMAIN-SUFFIX, sendbird.com
@@ -30,6 +31,7 @@ DOMAIN-SUFFIX, sendbird.com
 DOMAIN-SUFFIX, lloydsbank.co.uk
 DOMAIN-SUFFIX, amazontrust.com
 DOMAIN-SUFFIX, dynatrace.com
+DOMAIN-KEYWORD, lloydsbank
 # tsb
 DOMAIN-SUFFIX, tsb.co.uk
 DOMAIN-SUFFIX, tsb.demdex.net
@@ -61,3 +63,20 @@ DOMAIN-SUFFIX, monzo-alt.net
 DOMAIN-SUFFIX, monzo.com
 DOMAIN, monzo.statuspage.io
 DOMAIN, firebaselogging-pa.googleapis.com
+# lemfi
+DOMAIN-SUFFIX, app-measurement.com
+DOMAIN-SUFFIX, lemfi.com
+DOMAIN-SUFFIX, branch.io
+DOMAIN-SUFFIX, appsflyer.com
+DOMAIN-SUFFIX, customer.io
+# freetrade
+DOMAIN-SUFFIX, freetrade.io
+DOMAIN-SUFFIX, algolia.net
+DOMAIN-SUFFIX, asnapieu.com
+# 212
+DOMAIN-SUFFIX, trading212.com
+DOMAIN-SUFFIX, appsflyersdk.com
+DOMAIN-KEYWORD, trading212
+# aqua
+DOMAIN-SUFFIX, newdaycards.com
+DOMAIN-KEYWORD, newdaycards
