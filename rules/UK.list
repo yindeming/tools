@@ -21,6 +21,9 @@ DOMAIN-SUFFIX, checkmyfile.com
 # barclays
 DOMAIN-SUFFIX, barclays.co.uk
 DOMAIN-SUFFIX, barclays.com
+DOMAIN-SUFFIX, barclays.mobi
+DOMAIN, barclaysuk.sc.omtrdc.net
+DOMAIN, bclays-ads.aimatch.com
 # myguava
 DOMAIN-SUFFIX, guavapay.com
 DOMAIN-SUFFIX, sendbird.com
