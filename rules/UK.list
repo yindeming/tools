@@ -1,5 +1,4 @@
 # 英国银行
-DOMAIN-SUFFIX, monzo.com
 DOMAIN-SUFFIX, wise.com
 DOMAIN-SUFFIX, trading212.com
 DOMAIN-SUFFIX, freetrade.com
@@ -61,3 +60,4 @@ DOMAIN-SUFFIX, stripe.uk
 DOMAIN-SUFFIX, monzo-alt.net
 DOMAIN-SUFFIX, monzo.com
 DOMAIN, monzo.statuspage.io
+DOMAIN, firebaselogging-pa.googleapis.com
