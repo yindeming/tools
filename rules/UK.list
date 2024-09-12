@@ -45,3 +45,12 @@ DOMAIN-SUFFIX, launchdarkly.com
 DOMAIN-SUFFIX, verygoodvault.com
 DOMAIN-SUFFIX, verygood.systems
 DOMAIN-SUFFIX, appsflyer.com
+#
+DOMAIN-SUFFIX, curve.app
+DOMAIN-SUFFIX, branch.io
+DOMAIN-SUFFIX, emb-api.com
+DOMAIN-SUFFIX, imaginecurve.com
+#
+DOMAIN-SUFFIX, stripe.com
+DOMAIN-SUFFIX, sprig.com
+
