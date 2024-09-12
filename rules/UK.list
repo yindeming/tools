@@ -9,11 +9,26 @@ DOMAIN-SUFFIX, freetrade.com
 DOMAIN-SUFFIX, lemfi.com
 DOMAIN-SUFFIX, skrill.com
 DOMAIN-SUFFIX, skrill.uk
+# Chase
 DOMAIN-SUFFIX, chase.com
 DOMAIN-SUFFIX, chase.uk
+# 信用查询
+DOMAIN-SUFFIX, creditkarma.co.uk
 DOMAIN-SUFFIX, totallymoney.uk
 DOMAIN-SUFFIX, totallymoney.com
 DOMAIN-SUFFIX, clearscore.com
 DOMAIN-SUFFIX, checkmyfile.com
+# barclays
 DOMAIN-SUFFIX, barclays.co.uk
 DOMAIN-SUFFIX, barclays.com
+# myguava
+DOMAIN-SUFFIX, guavapay.com
+DOMAIN-SUFFIX,sendbird.com
+# 小马
+lloydsbank.co.uk
+amazontrust.com
+dynatrace.com
+# tsb
+tsb.co.uk
+tsb.demdex.net
+cm.everesttech.net
