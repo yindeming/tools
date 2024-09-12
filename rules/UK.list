@@ -39,9 +39,9 @@ DOMAIN-SUFFIX, wuzo.co.uk
 DOMAIN-SUFFIX, wuzo.com
 DOMAIN-SUFFIX, ipify.org
 # zilch
-payzilch.com
-eu.intercom.io
-launchdarkly.com
-verygoodvault.com
-verygood.systems
-appsflyer.com
+DOMAIN-SUFFIX, payzilch.com
+DOMAIN-SUFFIX, eu.intercom.io
+DOMAIN-SUFFIX, launchdarkly.com
+DOMAIN-SUFFIX, verygoodvault.com
+DOMAIN-SUFFIX, verygood.systems
+DOMAIN-SUFFIX, appsflyer.com
