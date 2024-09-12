@@ -57,3 +57,7 @@ DOMAIN-SUFFIX, imaginecurve.com
 DOMAIN-SUFFIX, stripe.com
 DOMAIN-SUFFIX, sprig.com
 DOMAIN-SUFFIX, stripe.uk
+# monzo
+DOMAIN-SUFFIX, monzo-alt.net
+DOMAIN-SUFFIX, monzo.com
+DOMAIN, monzo.statuspage.io
