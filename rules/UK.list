@@ -18,6 +18,9 @@ DOMAIN-SUFFIX, totallymoney.com
 DOMAIN-SUFFIX, clearscore.com
 DOMAIN-SUFFIX, checkmyfile.com
 DOMAIN-SUFFIX, hellopillar.com
+DOMAIN-SUFFIX, pillar.money
+DOMAIN-SUFFIX, experian.co.uk
+DOMAIN-SUFFIX, experianidentityservice.co.uk
 # barclays
 DOMAIN-SUFFIX, barclays.co.uk
 DOMAIN-SUFFIX, barclays.com
@@ -27,7 +30,8 @@ DOMAIN, bclays-ads.aimatch.com
 DOMAIN-KEYWORD, barclays
 # myguava
 DOMAIN-SUFFIX, guavapay.com
-DOMAIN-SUFFIX, sendbird.com
+DOMAIN-KEYWORD,myguava
+DOMAIN-KEYWORD,guavapay
 # 小马
 DOMAIN-SUFFIX, lloydsbank.co.uk
 DOMAIN-SUFFIX, amazontrust.com
@@ -42,7 +46,6 @@ DOMAIN-SUFFIX, ifastgb.com
 # wuzo
 DOMAIN-SUFFIX, wuzo.co.uk
 DOMAIN-SUFFIX, wuzo.com
-DOMAIN-SUFFIX, ipify.org
 # zilch
 DOMAIN-SUFFIX, payzilch.com
 DOMAIN-SUFFIX, eu.intercom.io
@@ -61,7 +64,9 @@ DOMAIN-SUFFIX, stripe.uk
 # monzo
 DOMAIN-SUFFIX, monzo-alt.net
 DOMAIN-SUFFIX, monzo.com
-DOMAIN, monzo.statuspage.io
+DOMAIN-SUFFIX, monzo.statuspage.io
+DOMAIN-SUFFIX, monzo.me
+DOMAIN-SUFFIX, nonprod-ffs.io
 # lemfi
 DOMAIN-SUFFIX, lemfi.com
 DOMAIN-SUFFIX, branch.io
@@ -85,4 +90,16 @@ DOMAIN-SUFFIX, browser-intake-datadoghq.eu
 DOMAIN-SUFFIX, paysend.io
 # hsbc uk
 DOMAIN-SUFFIX, hsbc.co.uk
+# topcashback
+DOMAIN-SUFFIX, topcashback.com
+# kroo
+DOMAIN-SUFFIX, kroo.com
+# uphold
+DOMAIN-SUFFIX, uphold.com
+# N26
+DOMAIN-SUFFIX, n26.com
+DOMAIN-SUFFIX, tech26.de
+DOMAIN-SUFFIX, number26.de
+DOMAIN-SUFFIX, dev-tech26.de
+
 
