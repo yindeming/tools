@@ -68,6 +68,7 @@ DOMAIN-SUFFIX, monzo.com
 DOMAIN-SUFFIX, monzo.statuspage.io
 DOMAIN-SUFFIX, monzo.me
 DOMAIN-SUFFIX, nonprod-ffs.io
+DOMAIN-KEYWORD, monzo
 # lemfi
 DOMAIN-SUFFIX, lemfi.com
 DOMAIN-SUFFIX, branch.io
