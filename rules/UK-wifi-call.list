@@ -10,4 +10,3 @@ DOMAIN-SUFFIX, vuk-gto.prod.ondemandconnectivity.com
 IP-CIDR,46.68.0.0/17
 # Giffgaff
 IP-CIDR,87.194.0.0/16
-DOMAIN-SUFFIX, cel.prod.ondemandconnectivity.com
