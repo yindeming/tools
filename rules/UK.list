@@ -32,15 +32,17 @@ DOMAIN-KEYWORD, barclays
 DOMAIN-SUFFIX, guavapay.com
 DOMAIN-KEYWORD,myguava
 DOMAIN-KEYWORD,guavapay
-# 小马
+# 小马系列
 DOMAIN-SUFFIX, lloydsbank.co.uk
 DOMAIN-SUFFIX, amazontrust.com
 DOMAIN-SUFFIX, dynatrace.com
 DOMAIN-KEYWORD, lloydsbank
-# tsb
+DOMAIN-KEYWORD, halifax
+DOMAIN-SUFFIX, bankofscotland.co.uk
 DOMAIN-SUFFIX, tsb.co.uk
-DOMAIN-SUFFIX, tsb.demdex.net
+DOMAIN-SUFFIX, demdex.net
 DOMAIN-SUFFIX, cm.everesttech.net
+DOMAIN-SUFFIX, omtrdc.net
 # ifast
 DOMAIN-SUFFIX, ifastgb.com
 # wuzo
