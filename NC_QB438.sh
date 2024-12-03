@@ -1,14 +1,14 @@
 #!/bin/bash
 
-if [ "$#" -lt 4 ]; then
+if [ "$#" -lt 2 ]; then
     echo "Usage: $0 <user> <password> <port> <qb_up_port>"
     exit 1
 fi
 
 USER=$1
 PASSWORD=$2
-PORT=$3
-UP_PORT=$4
+PORT=${3:-8080}
+UP_PORT=${4:-23333}
 RAM=$(free -m | awk '/^Mem:/{print $2}')
 CACHE_SIZE=$((RAM / 4))
 
