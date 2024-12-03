@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$#" -lt 3 ]; then
+if [ "$#" -lt 4 ]; then
     echo "Usage: $0 <user> <password> <port> <qb_up_port>"
     exit 1
 fi
