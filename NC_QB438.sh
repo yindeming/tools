@@ -17,11 +17,11 @@ systemctl disable qbittorrent-nox@$USER
 wget -O /usr/bin/qbittorrent-nox https://github.com/jerry048/Seedbox-Components/raw/refs/heads/main/Torrent%20Clients/qBittorrent/x86_64/Other/qBittorrent%204.3.8%20-%20libtorrent-v1.2.14/qbittorrent-nox
 chmod +x /usr/bin/qbittorrent-nox
 tune2fs -m 1 $(df -h / | awk 'NR==2 {print $1}') 
-sed -i "s/WebUI\\Port=[0-9]*/WebUI\\Port=$PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf 
-sed -i "s/Connection\\PortRangeMin=[0-9]*/Connection\\PortRangeMin=$UP_PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf 
-sed -i "/\[Preferences\]/a General\\Locale=zh" /home/$USER/.config/qBittorrent/qBittorrent.conf 
-sed -i "/\[Preferences\]/a Downloads\\PreAllocation=false" /home/$USER/.config/qBittorrent/qBittorrent.conf 
-sed -i "/\[Preferences\]/a WebUI\\CSRFProtection=false" /home/$USER/.config/qBittorrent/qBittorrent.conf 
+sed -i "s/WebUI\\\\Port=[0-9]*/WebUI\\\\Port=$PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf
+sed -i "s/Connection\\\\PortRangeMin=[0-9]*/Connection\\\\PortRangeMin=$UP_PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf
+sed -i "/\\[Preferences\\]/a General\\\\Locale=zh" /home/$USER/.config/qBittorrent/qBittorrent.conf
+sed -i '/\\[Preferences\\]/a Downloads\\\\PreAllocation=false' /home/$USER/.config/qBittorrent/qBittorrent.conf
+sed -i '/\\[Preferences\\]/a WebUI\\\\CSRFProtection=false' /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "s/disable_tso_/;/" /root/.boot-script.sh 
-echo -e "\nsystemctl enable qbittorrent-nox@$USER && reboot" >> /root/BBRx.sh 
+echo -e "\nsystemctl enable qbittorrent-nox@$USER && reboot" >> /root/BBRx.sh
 shutdown -r +1
