@@ -31,6 +31,6 @@ sed -i "/\\[Preferences\\]/a Downloads\\\\PreAllocation=false" /home/$USER/.conf
 sed -i "/\\[Preferences\\]/a WebUI\\\\CSRFProtection=false" /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "s/disable_tso_/# disable_tso_/" /root/.boot-script.sh
 echo "systemctl enable qbittorrent-nox@$USER" >> /root/BBRx.sh
-echo "reboot" >> /root/BBRx.sh
-echo "接下来将自动重启2次，流程预计5分钟..."
+echo "shutdown -r +1" >> /root/BBRx.sh
+echo "接下来将自动重启2次，流程预计5-10分钟..."
 shutdown -r +1
