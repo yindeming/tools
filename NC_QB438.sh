@@ -32,4 +32,5 @@ sed -i "/\\[Preferences\\]/a WebUI\\\\CSRFProtection=false" /home/$USER/.config/
 sed -i "s/disable_tso_/# disable_tso_/" /root/.boot-script.sh
 echo "systemctl enable qbittorrent-nox@$USER" >> /root/BBRx.sh
 echo "reboot" >> /root/BBRx.sh
+echo "接下来将自动重启2次，流程预计5分钟..."
 shutdown -r +1
