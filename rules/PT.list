@@ -6,6 +6,7 @@ DOMAIN-KEYWORD, get_peers
 DOMAIN-KEYWORD, find_node
 DOMAIN-KEYWORD, BitTorrent
 DOMAIN-KEYWORD, announce_peer
+DOMAIN-KEYWORD, audiences
 # > Private Tracker
 DOMAIN-SUFFIX, club.hares.top
 DOMAIN-SUFFIX, tracker.hhan.club
