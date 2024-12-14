@@ -23,7 +23,6 @@ elif [[ $systemARCH == aarch64 ]]; then
     wget -O /usr/bin/qbittorrent-nox https://raw.githubusercontent.com/iniwex5/tools/refs/heads/main/aarch64-qbittorrent-nox
 fi
 chmod +x /usr/bin/qbittorrent-nox
-tune2fs -m 1 $(df -h / | awk 'NR==2 {print $1}') 
 sed -i "s/WebUI\\\\Port=[0-9]*/WebUI\\\\Port=$PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "s/Connection\\\\PortRangeMin=[0-9]*/Connection\\\\PortRangeMin=$UP_PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "/\\[Preferences\\]/a General\\\\Locale=zh" /home/$USER/.config/qBittorrent/qBittorrent.conf
@@ -31,6 +30,8 @@ sed -i "/\\[Preferences\\]/a Downloads\\\\PreAllocation=false" /home/$USER/.conf
 sed -i "/\\[Preferences\\]/a WebUI\\\\CSRFProtection=false" /home/$USER/.config/qBittorrent/qBittorrent.conf
 sed -i "s/disable_tso_/# disable_tso_/" /root/.boot-script.sh
 echo "systemctl enable qbittorrent-nox@$USER" >> /root/BBRx.sh
+echo "systemctl start qbittorrent-nox@$USER" >> /root/BBRx.sh
 echo "shutdown -r +1" >> /root/BBRx.sh
+tune2fs -m 1 $(df -h / | awk 'NR==2 {print $1}') 
 echo "接下来将自动重启2次，流程预计5-10分钟..."
 shutdown -r +1
