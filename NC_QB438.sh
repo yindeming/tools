@@ -18,9 +18,9 @@ systemctl stop qbittorrent-nox@$USER
 systemctl disable qbittorrent-nox@$USER
 systemARCH=$(uname -m)
 if [[ $systemARCH == x86_64 ]]; then
-    wget -O /usr/bin/qbittorrent-nox https://github.com/jerry048/Seedbox-Components/raw/refs/heads/main/Torrent%20Clients/qBittorrent/x86_64/Other/qBittorrent%204.3.8%20-%20libtorrent-v1.2.14/qbittorrent-nox
+    wget -O /usr/bin/qbittorrent-nox https://raw.githubusercontent.com/guowanghushifu/Seedbox-Components/refs/heads/main/Torrent%20Clients/qBittorrent/x86_64/qBittorrent-4.3.8%20-%20libtorrent-v1.2.14/qbittorrent-nox
 elif [[ $systemARCH == aarch64 ]]; then
-    wget -O /usr/bin/qbittorrent-nox https://raw.githubusercontent.com/iniwex5/tools/refs/heads/main/aarch64-qbittorrent-nox
+    wget -O /usr/bin/qbittorrent-nox https://raw.githubusercontent.com/guowanghushifu/Seedbox-Components/refs/heads/main/Torrent%20Clients/qBittorrent/ARM64/qBittorrent-4.3.8%20-%20libtorrent-v1.2.14/qbittorrent-nox
 fi
 chmod +x /usr/bin/qbittorrent-nox
 sed -i "s/WebUI\\\\Port=[0-9]*/WebUI\\\\Port=$PORT/" /home/$USER/.config/qBittorrent/qBittorrent.conf
