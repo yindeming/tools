@@ -14,7 +14,7 @@ CACHE_SIZE=$((RAM / 8))
 
 bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) -u $USER -p $PASSWORD -c $CACHE_SIZE -q 4.3.9 -l v1.2.19 -x
 apt install -y curl htop vnstat
-#systemctl stop qbittorrent-nox@$USER
+systemctl stop qbittorrent-nox@$USER
 #systemctl disable qbittorrent-nox@$USER
 systemARCH=$(uname -m)
 if [[ $systemARCH == x86_64 ]]; then
