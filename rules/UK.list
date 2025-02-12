@@ -101,19 +101,10 @@ DOMAIN-SUFFIX, topcashback.com
 DOMAIN-SUFFIX, kroo.com
 # uphold
 DOMAIN-SUFFIX, uphold.com
-# Bybit
-DOMAIN-SUFFIX,bymj.io
-DOMAIN-SUFFIX,bybit.biz
-DOMAIN-SUFFIX,byd3c3.com
-DOMAIN-SUFFIX,bybdc6.com
-DOMAIN-SUFFIX,byapps.net
-DOMAIN-SUFFIX,bycsi.com
-DOMAIN-SUFFIX,bybit.com
-DOMAIN-SUFFIX,byabcde.com
-DOMAIN-SUFFIX,bybit.cloud
-DOMAIN-SUFFIX,bybit-aws.com
-DOMAIN-SUFFIX,bybitglobal.com
-DOMAIN-SUFFIX,bybit-global.com
+# yonder
+DOMAIN-SUFFIX,yondercard.com
+
+
 # 兜底
 DOMAIN-SUFFIX, co.uk
 
