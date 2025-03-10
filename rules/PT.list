@@ -8,6 +8,11 @@ DOMAIN-KEYWORD, BitTorrent
 DOMAIN-KEYWORD, announce_peer
 DOMAIN-KEYWORD, audiences
 # > Private Tracker
+DOMAIN-SUFFIX, sunnypt.top
+DOMAIN-SUFFIX, ubits.club
+DOMAIN-SUFFIX, qingwapt.com
+DOMAIN-SUFFIX, lemonhd.club
+DOMAIN-SUFFIX, zmpt.cc
 DOMAIN-SUFFIX, club.hares.top
 DOMAIN-SUFFIX, tracker.hhan.club
 DOMAIN-SUFFIX, hhanclub.top
