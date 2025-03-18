@@ -8,6 +8,7 @@ DOMAIN-KEYWORD, BitTorrent
 DOMAIN-KEYWORD, announce_peer
 DOMAIN-KEYWORD, audiences
 # > Private Tracker
+DOMAIN-SUFFIX, agsvpt.com
 DOMAIN-SUFFIX, sunnypt.top
 DOMAIN-SUFFIX, ubits.club
 DOMAIN-SUFFIX, qingwapt.com
