@@ -1,5 +1,6 @@
 DOMAIN-KEYWORD, tracker
 DOMAIN-KEYWORD, announce.php?passkey=
+DOMAIN-KEYWORD, announce?credential=
 DOMAIN-KEYWORD, peer_id=
 DOMAIN-KEYWORD, info_hash
 DOMAIN-KEYWORD, get_peers
