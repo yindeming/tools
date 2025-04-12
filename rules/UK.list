@@ -103,6 +103,11 @@ DOMAIN-SUFFIX, kroo.com
 DOMAIN-SUFFIX, uphold.com
 # yonder
 DOMAIN-SUFFIX,yondercard.com
+# nationwide
+DOMAIN-SUFFIX,nationwide.co.uk
+DOMAIN-SUFFIX,nationwidemortgages.co.uk
+DOMAIN-KEYWORD,nationwide
+IP-CIDR,185.203.72.0/22
 
 
 # 兜底
