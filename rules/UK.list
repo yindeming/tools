@@ -104,6 +104,10 @@ DOMAIN-SUFFIX, kroo.com
 DOMAIN-SUFFIX, uphold.com
 # yonder
 DOMAIN-SUFFIX,yondercard.com
+# jaja
+DOMAIN-SUFFIX,jaja.finance
+DOMAIN-SUFFIX,jaja.co.uk
+DOMAIN,jajafin-dataplane.rudderstack.com
 # nationwide
 DOMAIN-SUFFIX,nationwide.co.uk
 DOMAIN-SUFFIX,nationwidemortgages.co.uk
