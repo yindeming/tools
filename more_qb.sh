@@ -76,9 +76,6 @@ for instance in "${!INSTANCES[@]}"; do
     chown "${USERNAME}:${USERNAME}" "/home/${USERNAME}/${instance}"
     
     echo "已创建服务：${instance}"
-    echo "  - Web UI 端口：${web_port}"
-    echo "  - BT 端口：${bt_port}"
-    echo "  - SSL 端口：${ssl_port}"
 done
 
 # 重新加载 systemd 配置
