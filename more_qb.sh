@@ -178,14 +178,13 @@ for instance in "${!INSTANCES[@]}"; do
     systemctl start "${instance}.service"
 done
 
-# 获取公网IP地址
-echo "正在获取公网IP地址..."
+
 PUBLIC_IP=$(curl -s https://api.ipify.org || curl -s https://ifconfig.me || curl -s https://ipinfo.io/ip || hostname -I | awk '{print $1}')
 if [ -z "$PUBLIC_IP" ]; then
     echo "警告：无法获取公网IP地址，将使用localhost代替"
     PUBLIC_IP="localhost"
 fi
-echo "获取到的IP地址: ${PUBLIC_IP}"
+
 
 echo "所有服务文件已成功创建和配置"
 echo "使用用户名：${USERNAME}"
