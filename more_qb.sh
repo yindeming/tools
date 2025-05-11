@@ -169,6 +169,7 @@ done
 # 启动原始 qBittorrent 服务
 echo "启动原始 qBittorrent 服务..."
 systemctl start qbittorrent-nox@${USERNAME}.service
+systemctl enable qbittorrent-nox@${USERNAME}.service
 
 # 启用并启动所有创建的服务
 echo "启用所有创建的qBittorrent服务..."
