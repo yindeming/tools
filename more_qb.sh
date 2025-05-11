@@ -9,7 +9,7 @@ fi
 # 设置默认值
 DEFAULT_INSTANCES=3
 DEFAULT_WEB_PORT=8081
-DEFAULT_BT_PORT=23333
+DEFAULT_BT_PORT=23334
 
 # 解析命令行参数
 while getopts "n:w:b:" opt; do
