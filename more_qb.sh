@@ -82,7 +82,7 @@ echo "正在启动每个服务以生成配置文件..."
 for instance in "${!INSTANCES[@]}"; do
     echo "启动服务 ${instance}..."
     systemctl start "${instance}"
-    sleep 3
+    sleep 1
     
     echo "停止服务 ${instance}..."
     systemctl stop "${instance}"
