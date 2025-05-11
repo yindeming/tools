@@ -6,10 +6,7 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# 停止qbittorrent-nox@.service服务
-echo "正在停止qbittorrent-nox@.service服务..."
-systemctl stop qbittorrent-nox@.service
-systemctl disable qbittorrent-nox@.service
+
 
 # 设置默认值
 DEFAULT_INSTANCES=3
@@ -77,7 +74,10 @@ for instance in "${!INSTANCES[@]}"; do
     
     echo "已创建服务：${instance}"
 done
-
+# 停止qbittorrent-nox@.service服务
+echo "正在停止qbittorrent-nox@${USERNAME}.service服务..."
+systemctl stop qbittorrent-nox@${USERNAME}.service
+systemctl disable qbittorrent-nox@${USERNAME}.service
 # 重新加载 systemd 配置
 systemctl daemon-reload
 
