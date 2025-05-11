@@ -6,21 +6,17 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-
-
 # 设置默认值
 DEFAULT_INSTANCES=3
 DEFAULT_WEB_PORT=8081
 DEFAULT_BT_PORT=23333
-DEFAULT_SSL_PORT=24444
 
 # 解析命令行参数
-while getopts "n:w:b:s:" opt; do
+while getopts "n:w:b:" opt; do
     case $opt in
         n) NUM_INSTANCES="$OPTARG" ;;
         w) START_WEB_PORT="$OPTARG" ;;
         b) START_BT_PORT="$OPTARG" ;;
-        s) START_SSL_PORT="$OPTARG" ;;
         \?) echo "无效的选项: -$OPTARG" >&2; exit 1 ;;
     esac
 done
@@ -29,7 +25,6 @@ done
 NUM_INSTANCES=${NUM_INSTANCES:-$DEFAULT_INSTANCES}
 START_WEB_PORT=${START_WEB_PORT:-$DEFAULT_WEB_PORT}
 START_BT_PORT=${START_BT_PORT:-$DEFAULT_BT_PORT}
-START_SSL_PORT=${START_SSL_PORT:-$DEFAULT_SSL_PORT}
 
 # 源文件和目标文件路径
 SOURCE_FILE="/etc/systemd/system/qbittorrent-nox@.service"
@@ -52,7 +47,8 @@ declare -A INSTANCES
 for ((i=2; i<=NUM_INSTANCES+1; i++)); do
     web_port=$((START_WEB_PORT + i - 2))
     bt_port=$((START_BT_PORT + i - 2))
-    ssl_port=$((START_SSL_PORT + i - 2))
+    # 计算SSL端口，使用BT端口+1000
+    ssl_port=$((bt_port + 1000))
     INSTANCES["qb$i"]="$web_port:$bt_port:$ssl_port"
 done
 
@@ -182,13 +178,22 @@ for instance in "${!INSTANCES[@]}"; do
     systemctl start "${instance}.service"
 done
 
+# 获取公网IP地址
+echo "正在获取公网IP地址..."
+PUBLIC_IP=$(curl -s https://api.ipify.org || curl -s https://ifconfig.me || curl -s https://ipinfo.io/ip || hostname -I | awk '{print $1}')
+if [ -z "$PUBLIC_IP" ]; then
+    echo "警告：无法获取公网IP地址，将使用localhost代替"
+    PUBLIC_IP="localhost"
+fi
+echo "获取到的IP地址: ${PUBLIC_IP}"
+
 echo "所有服务文件已成功创建和配置"
 echo "使用用户名：${USERNAME}"
 echo "服务列表："
 for instance in "${!INSTANCES[@]}"; do
     IFS=':' read -r web_port bt_port ssl_port <<< "${INSTANCES[$instance]}"
     echo "- ${instance}:"
-    echo "  Web UI 端口：${web_port}"
+    echo "  Web UI 地址：http://${PUBLIC_IP}:${web_port}"
     echo "  BT 端口：${bt_port}"
     echo "  SSL 端口：${ssl_port}"
 done
