@@ -189,7 +189,7 @@ echo "获取到的IP地址: ${PUBLIC_IP}"
 
 echo "所有服务文件已成功创建和配置"
 echo "使用用户名：${USERNAME}"
-echo "服务列表："
+echo "新增的qBittorrent服务列表："
 for instance in "${!INSTANCES[@]}"; do
     IFS=':' read -r web_port bt_port ssl_port <<< "${INSTANCES[$instance]}"
     echo "- ${instance}:"
