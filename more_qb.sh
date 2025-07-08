@@ -61,8 +61,8 @@ for instance in "${!INSTANCES[@]}"; do
     cp "$SOURCE_FILE" "$TARGET_FILE"
     
     # 修改目标文件内容
-    sed -i "s/Description=qBittorrent/Description=qBittorrent ${instance}/" "$TARGET_FILE"
-    sed -i "s/ExecStart=\/usr\/bin\/qbittorrent-nox -d/ExecStart=\/usr\/bin\/qbittorrent-nox --profile=\/home\/${USERNAME}\/${instance} --confirm-legal-notice" "$TARGET_FILE"
+    sed -i "s/Description=qBittorrent/Description= ${instance}/" "$TARGET_FILE"
+    sed -i "s/ExecStart=\/usr\/bin\/qbittorrent-nox/ExecStart=\/usr\/bin\/qbittorrent-nox --profile=\/home\/${USERNAME}\/${instance} --confirm-legal-notice" "$TARGET_FILE"
     
     # 创建配置目录
     mkdir -p "/home/${USERNAME}/${instance}"
